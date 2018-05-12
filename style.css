@@ -1,0 +1,36 @@
+body {
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.linked-list-icon {
+  height: 200px;
+  width: 200px;
+}
+
+.title-url {
+  height: 100%;
+  display: inline-block;
+  background-color: #455A64;
+  width: 49%;
+}
+
+.bookmarks {
+  height: 100%;
+  background-color: #CFD8DC;
+  display: inline-block;
+  width: 49%;
+}
+
+#web-title,
+#user-url,
+#submit-bookmark {
+  margin-left: 10px;
+  text-align: center;
+  width: 95%;
+}
