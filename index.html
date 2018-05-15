@@ -2,22 +2,28 @@
 <html>
 <head>
   <title>Linked List</title>
+
   <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<section class ="title-url">
-  <h1>Linked <img src="linked-list-logo.svg" class ="linked-list-icon" alt="linked List Icon">List</h1>
-  <form>
-    <input id ="web-title" type="text" name="title-input" placeholder ="Website Title">
-    <label for ="web-title"></label>
-    <input id ="user-url" type="url" name="url" placeholder ="Website URL">
-    <label for ="user-url"></label>
-    <input id ="submit-bookmark" type="submit" name="Enter">
-    <label for ="submit-bookmark"></label>
+<section class="title-url">
+  <h1>Linked<img src="linked-list-logo.svg" class ="linked-list-icon" alt="linked List Icon">List</h1>
+  <form id="bookmark-form">
+    <input id="web-title" type="text" name="title-input" placeholder ="Website Title">
+    <label for="web-title"></label>
+    <input id="user-url" type="text" name="url" placeholder="Website URL">
+    <label for="user-url"></label>
+    <button id="submit-bookmark" type="submit" name="Enter">Enter</button>
   </form>
 </section>
-<section class ="bookmarks">
-  <h1>Bookmarks</h1>
+<section class="bookmarks" id="bookmarks-display">
+  <!-- <article class="new-bookmark">
+    <h2 class="title-header">Title</h2>
+    <p class ="link-header">Linkxsadasxcascxsc</p>
+    <button class="read">Read</button>
+    <button class="delete">Delete</button>
+  </article> -->
 </section>
 <script type="text/javascript" src="script.js"></script>
 </body>

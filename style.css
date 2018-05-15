@@ -1,36 +1,104 @@
+html {
+  height: 100vw;
+}
+
 body {
-  height: 100%;
-  width: 100%;
+  font-family: "Open Sans";
+  font-weight: 800;
+  height: 100vw;
+  width: 100vw;
 }
 
 h1 {
+  margin-top: 150px;
+  font-size: 50px;
   text-align: center;
   color: #FFFFFF;
 }
 
+section {
+height: 100vw;
+}
+
 .linked-list-icon {
-  height: 200px;
-  width: 200px;
+  height: 40px;
+  width: 50px;
 }
 
 .title-url {
   height: 100%;
-  display: inline-block;
+  float: left;
   background-color: #455A64;
-  width: 49%;
+  width: 50%;
 }
 
 .bookmarks {
   height: 100%;
   background-color: #CFD8DC;
-  display: inline-block;
-  width: 49%;
+  float: right;
+  width: 50%;
 }
 
 #web-title,
 #user-url,
 #submit-bookmark {
+  height: 30px;
+  margin-bottom: 30px;
   margin-left: 10px;
   text-align: center;
   width: 95%;
+}
+ #submit-bookmark:hover {
+  background-color: #FFD773;
+  color: #FFFFFF;
+}
+
+#submit-bookmark {
+  color: #FFFFFF;
+  background-color: #FFC107;
+}
+
+section.bookmark-border {
+  color: #455A64;
+}
+
+@media screen and (max-width: 550px) {
+  .title-url,
+  .bookmarks {
+    float: none;
+    height: 50%;
+    width: 100%;
+  }
+}
+
+.read {
+  border: none;
+
+}
+
+.delete {
+
+  float: right;
+}
+
+.title-header {
+  border-bottom: solid 2px #CFD8DC; 
+  font-size: 32px;
+  color: #455A64;
+}
+.link-header { 
+  font-size: 26px; 
+  padding-bottom: 25px;
+  color: #607D8B;
+  border-bottom: solid 2px #CFD8DC;
+}
+
+article {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #FFFFFF;
+  width: 85%;
+  margin: 20px auto;
+  height: 15%;
+  border: solid 2px #607D8B;
 }
