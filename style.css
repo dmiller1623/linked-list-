@@ -2,24 +2,43 @@ html  {
   height: 100vh;
 }
 
-body  {
-  font-family: "Open Sans";
+body {
+  font-family: 'Open Sans', sans-serif;  font-weight: 800;
   font-weight: 800;
   height: 100vh;
   width: 100vw;
+  
 }
 
 h1  {
-  margin-top: 150px;
-  font-size: 50px;
-  text-align: center;
   color: #FFFFFF;
+  font-size: 50px;
+  margin-top: 150px;
   text-align: center;
+}
+
+section {
+height: 100vh;
+}
+
+section.bookmark-border {
+  color: #455A64;
+}
+
+article {
+  background-color: #FFFFFF;
+  border: solid 2px #607D8B;
+  height: 200px;
+  margin: 20px auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 85%;
 }
 
 section  {
 height: 100vh;
 width: 50%;
+
 }
 
 .linked-list-icon  {
@@ -27,24 +46,18 @@ width: 50%;
   width: 50px;
 }
 
-.bookmarks  {
-  background-color: #CFD8DC;
-  display: inline-block;
-  float:right;
-  padding: 5px;
- } 
-
- article  {
-  height: 30vh;
-  width: 80%;
-  margin: 0;
- }
-  
-.title-url  {
+.title-url {
   background-color: #455A64;
-  display: inline-block;
+  float: left;
   height: 100%;
-  width: 49%;
+  width: 50%;
+}
+
+.bookmarks {
+  background-color: #CFD8DC;
+  float: right;
+  height: 100%;
+  width: 50%;
 }
 
 #web-title,
@@ -53,59 +66,69 @@ width: 50%;
   height: 30px;
   margin-bottom: 30px;
   margin-left: 10px;
-  text-align: center;
   width: 95%;
 }
- #submit-bookmark:hover  {
+
+ #submit-bookmark:hover {
   background-color: #FFD773;
   color: #FFFFFF;
+  text-align: center;
 }
 
-#submit-bookmark  {
-  color: #FFFFFF;
-  background-color: #FFC107;
+@media screen and (max-width: 750px) {
+  .title-url,
+  .bookmarks {
+    width: 100%;
+  }
 }
-
+ 
+.readbutton {
+  margin-top: 10px;
+}
 section.bookmark-border  {
   color: #455A64;
 }
 
-@media screen and (max-width: 550px)  {
-  .title-url,
-  .bookmarks  {
-    float: none;
-    height: 50%;
-    width: 100%;
-  }
+.readbutton:hover {
+text-decoration: underline solid #FFC107;
 }
 
-.read  {
+.deletebutton {
   border: none;
-
+  color: #455A64;
 }
 
-.delete  {
-  float: right;
+.deletebutton:hover {
+  text-decoration: underline solid #FFC107;
 }
 
 .title-header  {
   border-bottom: solid 2px #CFD8DC; 
-  font-size: 32px;
   color: #455A64;
-}
-.link-header  { 
-  font-size: 26px; 
-  padding-bottom: 25px;
-  color: #607D8B;
-  border-bottom: solid 2px #CFD8DC;
+  font-size: 32px;
 }
 
-article  {
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: #FFFFFF;
-  width: 85%;
-  margin-top: 20px;
-  height: 15%;
-  border: solid 2px #607D8B;
+.link-header { 
+  border-bottom: solid 2px #CFD8DC;
+  color: #607D8B;
+  display: block;
+}
+.link-header:hover {
+  text-decoration: underline solid #FFC107;
+}
+
+.new-read {
+  background-color: #F2F4F4;
+  color: #F05A26;
+}
+
+.delete {
+  display: none;
+}
+
+@media screen and (max-width: 400px) {
+  .title-url,
+  .bookmarks {
+    float: none;
+    width: 100%;
 }

@@ -5,13 +5,24 @@ var userInputTitle = document.querySelector('#web-title');
 var userInputUrl = document.querySelector('#user-url');
 var bookmarksDisplay = $('#bookmarks-display');
 var bookmarkForm = document.querySelector('#bookmark-form');
+
+userInputTitle.addEventListener('keyup', disableButton);
+userInputUrl.addEventListener('keyup', disableButton);
 bookmarkForm.addEventListener('submit', function(e) {
   e.preventDefault();
   displayBookmarks();
 })
 
+function disableButton() {
+  if (userInputTitle.value === "" || userInputUrl.value === "") {
+    submitButton.disabled = true;
+  } else {
+    submitButton.disabled = false;
+  }
+}
 
 function displayBookmarks() {
+  disableButton();
   var bookmark = new Bookmark(userInputTitle.value, userInputUrl.value);
   var title = bookmark.title
   var url = bookmark.url
@@ -24,15 +35,8 @@ function displayBookmarks() {
     </article> 
   `);
   bookmarksDisplay.append(template);
-  missingInput();
   changeReadButton();
   deleteBookmark();
-}
-
-function missingInput() {
-  if (userInputUrl.value === "" || userInputTitle.value === ""){
-    alert('Missing Input');
-  }
 }
 
 function Bookmark(title, url) {
@@ -56,7 +60,7 @@ function changeReadButton() {
    parentBox.addEventListener('click', function(event) {
       if (event.target.className === "readbutton") {
       this.classList.add('new-read')
-      console.log(this);
-      }
-})
-}    
+      console.log(event);
+  }
+  })
+}  
